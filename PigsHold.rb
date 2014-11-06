@@ -1,17 +1,17 @@
 #Pigs Hold at 20
 #Tom Tibble and Kevin
 
-cpuTotal = 0
-roundTotal = 0
-until roundTotal  >= 20
+round_total = 0
+until round_total  >= 20
 
 	roll = rand(6) + 1
 	puts("Roll: #{roll}")
 
 	if roll == 1
-		roundTotal = 0
+		round_total = 0
 		break
 	end
-	roundTotal += roll
+	round_total += roll
 end
-puts("Round total: #{roundTotal}")
+puts("Round total: #{round_total}")
+
