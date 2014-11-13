@@ -1,5 +1,7 @@
-#Pigs Hold at 20
-#Tom Tibble and Kevin
+#Pig probablities
+#Tom Tibble and Kevin McKeown
+
+#Problem 1
 
 round_total = 0
 print "Enter a hold number:"
@@ -27,3 +29,5 @@ end
 puts "Score	Estimated Probability"
 scores = Hash[scores.sort_by{|key,value| key}]
 scores.each{ |key,value| puts("#{key}	#{((value.to_f/run_count)).round(3)}") }
+
+# Problem 2
