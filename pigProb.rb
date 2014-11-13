@@ -31,3 +31,30 @@ scores = Hash[scores.sort_by{|key,value| key}]
 scores.each{ |key,value| puts("#{key}	#{((value.to_f/run_count)).round(3)}") }
 
 # Problem 2
+
+score = Array.new(26){ |i| i=0.0 }
+score[0] = 1.0
+
+for i in 0..19
+	p = (score[i].to_f/6)
+	score[i]=0.0
+	score[0]+=p
+	score[i+2]+=p
+	score[i+3]+=p
+	score[i+4]+=p
+	score[i+5]+=p
+	score[i+6]+=p
+end
+
+puts "\nProblem 2:"
+
+puts "Score	Estimated Probability"
+i=0
+for val in score
+		if val>0 
+			puts "#{i}	#{'%.06f' % val}"
+		end
+		i=i+1
+end
+
+	
